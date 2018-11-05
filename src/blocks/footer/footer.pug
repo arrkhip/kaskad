@@ -1,0 +1,64 @@
+mixin footer(mod) 
+	+b.FOOTER.footer(class= mod)&attributes(attributes)
+		+e.contacts
+			+e.contacts-wrap.wrap
+				h2 Контакты
+				+e.contacts-tel
+					+svg-icon('tel')
+					p Аренда спецтехники: <br>
+						a(href="tel:+7-960-821-88-83") +7-960-821-88-83
+				+e.contacts-adds
+					+svg-icon('address')
+					p г. Самара, <br> Томашевский тупик 3 офис 7
+				button.btn.js-open-popup-call Заказать звонок
+		.wrap
+			+e.services
+				+e.services-title Аренда спецтехники
+				+e.services-inner
+					+e.UL.services-list
+						li
+							a(href="#") А/м ISUZU+КМУ (7т)+Борт 13-7,5 м 25т
+						li
+							a(href="#") А/м камаз+полуприцеп 13,5 м
+						li
+							a(href="#") Камаз - самосвал 65115
+						li
+							a(href="#") Бульдозер Т-170
+						li
+							a(href="#") Бульдозер CASE 1650 L XLT
+						li
+							a(href="#") Грейдер ДЗ-180
+						li
+							a(href="#") Грейдер ГС-14.02
+						li
+							a(href="#") Каток грунтовой AMMANN-16th
+						li
+							a(href="#") Каток грунтовой НАММ3518 -18тн
+					+e.UL.services-list
+						li
+							a(href="#") Каток гладковальцовый вибро HAMM HD+90VO 9.5тн
+						li
+							a(href="#") Каток пневмошинный HAMM GRV15 18тн
+						li
+							a(href="#") Фронтальный погрузчик XGMA V ковша 1,8мЗ /Зт
+						li
+							a(href="#") Фронтальный погрузчик Амкодор342Б V ковша 2,5мЗ/4т
+						li
+							a(href="#") Погрузчик - экскаватор Caterpillar 428 F
+						li
+							a(href="#") Экскаватор гусеничный HITACHI Zexis 220 (V ковша -1,1 м3)
+						li
+							a(href="#") Трал низкорамный ЧМЗаП г.п. 40 тн.
+						li
+							a(href="#") Автогудронатор Маз V-бмЗ
+						li
+							a(href="#") МТЗ 82.1 (Беларусь) - погрузчик-щетка
+			+e.copyright 
+				p &copy; 2012 - 2018 ООО "Каскад" Самара. Все права защищены. Полное или частичное копирование любых материалов возможно только с разрешения администрации сайта и установки активной ссылки на источник.
+
+
+
+
+
+
+

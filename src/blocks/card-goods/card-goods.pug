@@ -1,0 +1,49 @@
+mixin card-goods() 
+	+b.card-goods
+		+e.banner
+			img(src="img/card-goods__banner.png", alt="")
+		+e.info
+			+e.info-head
+				p Фронтальный погрузчик
+				p Амкодор 342Б
+			+e.info-body
+				+e.info-list
+					+e.info-row
+						p Грузоподъемность
+						p 4 тонны
+					+e.info-row
+						p Объем ковша, V
+						p 2.5 M3
+					+e.info-row
+						p Стоимость 1 маш./часа
+						p 2500 руб.
+					+e.info-row
+						p Стоимость 1км пробега
+						p 50 руб.
+					+e.info-row
+						p Количество
+						p 1 шт
+					+e.info-row
+						p Грузоподъемность
+						p 4 тонны
+					+e.info-row
+						p Объем ковша, V
+						p 2.5 M3
+				.btn.btn--skew Арендовать
+		+e.preview
+			ul
+				+e.LI.preview-item--active
+					a(href="img/card-goods__banner.png")
+						img(src="img/card-goods__img1.png", alt="")
+				+e.LI.preview-item
+					a(href="img/card-goods__banner1.png")
+						img(src="img/card-goods__img2.png", alt="")
+				+e.LI.preview-item
+					a(href="img/card-goods__banner.png")
+						img(src="img/card-goods__img3.png", alt="")
+				+e.LI.preview-item
+					a(href="img/card-goods__banner1.png")
+						img(src="img/card-goods__img4.png", alt="")
+				+e.LI.preview-item
+					a(href="img/card-goods__banner.png")
+						img(src="img/card-goods__img5.png", alt="")

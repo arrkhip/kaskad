@@ -1,0 +1,19 @@
+include ../../blocks/svg-icon/svg-icon
+
+mixin popup() 
+	+b.FORM.popup
+		+e.inner
+			+e.logo
+				img(src="img/logo-white.png", alt="")
+			+e.form
+				+e.close
+					+svg-icon('close')
+				+e.title Аренада катка грунтового AMMANN-16тн
+				label.label(for="name") Контактное лицо
+				input.input(type="text", id="name")
+				label.label(for="tel") Контактный телефон
+				input.input(type="tel", id="tel")
+				label.label(for="adds") Адрес рабочей площадки
+				input.input(type="text", id="adds")
+				+e.box
+					button.btn Заказать арендуssss

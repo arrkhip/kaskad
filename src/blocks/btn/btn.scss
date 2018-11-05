@@ -1,0 +1,58 @@
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 60px;
+	padding: 0 40px;
+	border: 1px solid transparent;
+	font-size: 18px;
+	font-weight: 700;
+	color: $white;
+	background-color: #1f70aa;
+	background-image: linear-gradient(to top, transparent 0%, transparent 100%);
+	@include trs;
+
+	&:hover {
+		cursor: pointer;
+		color: #1f70aa;
+		border-color: #1f70aa;
+		background-color: #fff;
+	}
+
+	&--skew {
+		margin-left: 18px;
+		position: relative;
+		background-color: #ee5f12;
+		border: none;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -18px;
+			width: 0;
+			height: 0;
+			border-left: 18px solid transparent;
+			border-right: 0px solid transparent;
+			border-top: 60px solid #ee5f12;
+		}
+
+		svg {
+			width: 15px;
+			height: 15px;
+			margin-left: 16px;
+			fill: $white;
+			@include trs;
+		}
+
+		&:hover {
+			opacity: .8;
+			background-color: #ee5f12;
+			color: $white;
+
+			svg {
+				fill: $white;
+			}
+		}
+	}
+}

@@ -1,0 +1,18 @@
+include ../../blocks/svg-icon/svg-icon
+
+mixin popup-call() 
+	+b.FORM.popup-call
+		+e.inner
+			+e.logo
+				img(src="img/logo-white.png", alt="")
+			+e.form
+				+e.close
+					+svg-icon('close')
+				+e.title Заказать звонок
+				label.label(for="name") Контактное лицо
+				input.input(type="text", id="name")
+				label.label(for="tel") Контактный телефон
+				input.input(type="tel", id="tel")
+				+e.box
+					button.btn Заказать звонок
+						+svg-icon('arrow')

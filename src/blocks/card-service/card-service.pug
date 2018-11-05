@@ -1,0 +1,10 @@
+mixin card-service(mod, title, descr1, descr2, url) 
+	+b.card-service(class=mod)
+		+e.info
+			+e.title= title
+			+e.descr
+				p=descr1
+				p=descr2
+				+e.BUTTON.btn.btn.btn--skew.js-open-popup Арендовать
+						+svg-icon('arrow')
+		+e.banner(style="background-image: url(" +url+ ");")

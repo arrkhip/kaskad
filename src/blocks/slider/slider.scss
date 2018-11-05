@@ -1,0 +1,38 @@
+.slider {
+	padding-bottom: 42px;
+
+	&__dots {
+		float: right;
+		margin-top: 20px;
+		margin-right: 60px;
+
+		li {
+			display: inline-block;
+
+			&:hover button {
+				cursor: pointer;
+				border-color: #fd951b;
+			}
+
+			&:not(:last-child) {
+				margin-right: 12px;
+			}
+
+			&.slick-active button {
+				background-color: #fd951b;
+				border-color: #fd951b;
+			}
+
+			button {
+				width: 20px;
+				height: 20px;
+				border: 2px solid #e1e1e1;
+				background-color: transparent;
+				overflow: hidden;
+				text-indent: 999px;
+				transform: skewX(-30deg);
+				@include trs;
+			}
+		}
+	}
+}

@@ -1,0 +1,28 @@
+.bread-crumbs {
+	margin-top: 20px;
+	margin-bottom: 40px;
+	font-size: 1.4rem;
+	line-height: 1.8rem;
+	color: #585858;
+
+	&--line {
+		padding-bottom: 25px;
+		border-bottom: 1px solid fade-out($black, .9);
+	}
+
+	li {
+		display: inline-block;
+
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+	}
+
+	a {
+		@include trs;
+
+		&:hover {
+			color: #e6942d;
+		}
+	}
+}

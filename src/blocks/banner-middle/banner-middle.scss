@@ -1,0 +1,86 @@
+.banner-middle {
+	position: relative;
+	display: flex;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 0;
+		height: 0;
+		border-right: 45px solid transparent;
+		border-left: 0 solid transparent;
+		border-top: 45px solid $white;
+		z-index: 2;
+	}
+
+	&__info,
+	&__banner {
+		width: 50%;
+	}
+
+	&__info {
+		padding-top: 75px;
+		padding-bottom: 60px;
+		padding-left: 40px;
+		background-color: #2374ad;
+		background-image: linear-gradient(to top,rgba(255, 255, 255, 0.15) 0%,rgba(0,0,0,.01) 100%);
+		z-index: 1;
+
+		p {
+			font-size: 3.6rem;
+			line-height: 4.1rem;
+			font-weight: 300;
+			color: $white;
+
+			b {
+				font-weight: 900;
+			}
+		}
+	}
+
+	&__banner {
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+	@include width-md {
+
+		&__info,
+		&__banner {
+			width: 100%;
+		}
+
+		&__info {
+			background-color: rgba(35, 116, 173, 0.93);
+		}
+
+		&__banner {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+		}
+	}
+
+	@include width-sm {
+
+		&__info {
+			padding-left: 40px;
+		}
+	}
+
+	@include width-xs{
+
+		&__info {
+			padding: 20px 40px;
+
+			p {
+				font-size: 2.2rem;
+				line-height: 2.8rem;
+			}
+		}
+	}
+}

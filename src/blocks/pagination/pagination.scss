@@ -1,0 +1,42 @@
+.pagination {
+
+	&__list {
+		display: flex;
+		align-items: flex-end;
+	}
+
+	&__item {
+
+		&:not(:last-child) {
+			margin-right: 20px;
+		}
+	}
+
+	&__link {
+		font-size: 16px;
+		font-weight: 900;
+		color: #343434;
+		@include trs;
+
+		&:not(.pagination__link--active):hover {
+			color: #fd961b;
+		}
+
+		&--active {
+			position: relative;
+			color: $white;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: -3px;
+				left: -7px;
+				width: 25px;
+				height: 25px;
+				background-color: #fd961b;
+				transform: skewX(-15deg);
+				z-index: -1;
+			}
+		}
+	}
+}

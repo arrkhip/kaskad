@@ -1,0 +1,50 @@
+// Файлы сторонних библиотек
+@import 'vendor/normalize/normalize.scss';
+@import 'vendor/slick-slider/slick.scss';
+@import 'vendor/animate/animate.scss';
+
+// Общие файлы стилей
+@import 'global/variables.scss';
+@import 'global/font.scss';
+@import 'global/mixins.scss';
+@import 'global/grid.scss';
+@import 'global/base.scss';
+
+// Стилевые файлы БЭМ-блоков
+@import '../blocks/pattern/pattern.scss';
+
+
+@import '../blocks/btn/btn.scss';
+@import '../blocks/header/header.scss';
+@import '../blocks/about/about.scss';
+@import '../blocks/footer/footer.scss';
+@import '../blocks/bread-crumbs/bread-crumbs.scss';
+@import '../blocks/card-product/card-product.scss';
+@import '../blocks/banner-small/banner-small.scss';
+@import '../blocks/banner-middle/banner-middle.scss';
+@import '../blocks/banner/banner.scss';
+@import '../blocks/slider/slider.scss';
+@import '../blocks/filter/filter.scss';
+@import '../blocks/pagination/pagination.scss';
+@import '../blocks/contact-form/contact-form.scss';
+@import '../blocks/price-table/price-table.scss';
+@import '../blocks/card-service/card-service.scss';
+@import '../blocks/card-work/card-work.scss';
+@import '../blocks/about-banner/about-banner.scss';
+@import '../blocks/card-plus/card-plus.scss';
+@import '../blocks/popup/popup.scss';
+@import '../blocks/card-special/card-special.scss';
+@import '../blocks/card-goods/card-goods.scss';
+@import '../blocks/popup-call/popup-call.scss';
+
+
+@import '../blocks/pages/index-page/index-page.scss';
+@import '../blocks/pages/patterns-page/patterns-page.scss';
+@import '../blocks/pages/site-nav-page/site-nav-page.scss';
+@import '../blocks/pages/catalog-page/catalog-page.scss';
+@import '../blocks/pages/contacts-page/contacts-page.scss';
+@import '../blocks/pages/price-page/price-page.scss';
+@import '../blocks/pages/work-page/work-page.scss';
+@import '../blocks/pages/about-page/about-page.scss';
+@import '../blocks/pages/goods-page/goods-page.scss';
+

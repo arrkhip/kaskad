@@ -1,0 +1,36 @@
+include ../../blocks/svg-icon/svg-icon
+
+mixin header(mod)
+	+b.HEADER.header(class= mod)
+		+e.wrap.wrap
+			+e.A.logo(href="/")
+				img(src="img/logo-blue.png", alt="")
+			+e.switch.js-header__switch
+				span
+			+e.inner
+				+e.A.phone(href="tel:8 (846) 991-65-25")
+					+e.phone-icon
+						+svg-icon('tel')
+					+e.phone-info
+						p Аренда спецтехники:
+						p 8 (846) 991-65-25
+				+e.A.adds(href="", target="_blank")
+					+e.adds-icon
+						+svg-icon('address')
+					+e.adds-info
+						p г. Самара, <br> Томашевский тупик 3 офис 7
+				+e.btn.btn.js-open-popup-call Заказать звонок
+
+				+e.NAV.nav
+					+e.UL.nav-list
+						+e.LI.nav-item
+							a(class=(page === 'catalog') ? "header__nav-link header__nav-link--active" : "header__nav-link" href="catalog.html") Каталог спецтехники
+						+e.LI.nav-item
+							a(class=(page === 'price') ? "header__nav-link header__nav-link--active" : "header__nav-link" href="price.html") Прайс-лист
+						+e.LI.nav-item
+							a(class=(page === 'work') ? "header__nav-link header__nav-link--active" : "header__nav-link" href="work.html") Условия работы
+						+e.LI.nav-item
+							a(class=(page === 'about') ? "header__nav-link header__nav-link--active" : "header__nav-link" href="about.html") О компании
+						+e.LI.nav-item
+							a(class=(page === 'contacts') ? "header__nav-link header__nav-link--active" : "header__nav-link" href="contacts.html") Контакты
+						

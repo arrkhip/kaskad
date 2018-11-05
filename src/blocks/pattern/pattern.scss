@@ -1,0 +1,21 @@
+.pattern {
+	padding-bottom: 50px;
+
+	&:not(:first-child) .pattern__header {
+		padding-top: 50px;
+		border-top: 1px solid #eee;
+	}
+
+	&__header {
+		margin-bottom: 50px;
+	}
+
+	&__title {
+		display: inline-block;
+		padding-bottom: 5px;
+		border-bottom: 4px solid #fd961b;
+		font-size: 3rem;
+		font-weight: 900;
+		letter-spacing: 1px;
+	}
+}

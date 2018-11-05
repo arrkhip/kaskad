@@ -1,0 +1,53 @@
+extends ../layout/layoutBase.pug
+
+include ../../blocks/header/header
+include ../../blocks/banner-middle/banner-middle
+include ../../blocks/about-banner/about-banner
+include ../../blocks/card-work/card-work
+include ../../blocks/card-plus/card-plus
+include ../../blocks/about/about
+include ../../blocks/footer/footer
+include ../../blocks/popup/popup
+include ../../blocks/popup-call/popup-call
+
+	
+block content
+	- var page = 'about';
+	+b.about-page
+		+header()
+		.wrap
+			+b.bread-crumbs
+				ul
+					li
+						a(href="#") Главная
+					li 
+						span / 
+					li
+						span О компании
+			+about-banner()
+			+e.title Выполненные работы
+			+e.works
+				+card-work('ЖК «Парк победы»', '../img/card-work-bg-1.png')
+				+card-work('ЖК «Дом у Космопорта»', '../img/card-work-bg-1.png')
+				+card-work('ТРК «АМБАР»', '../img/card-work-bg-2.png')
+			+e.statistics
+				+e.statistics-info
+					+e.statistics-item
+						p > <span class="js-count">100</span> 
+						p выполненных объектов
+					+e.statistics-item
+						p > <span class="js-count">500 000</span> м<sup>2</sup>
+						p построено жилых и комм. помещений
+				+e.statistics-descr
+					p ООО "Каскад" уже много лет успешно работает на Самарском рынке оказания услуг по общестроительным, отделочным, бетонным работам, асфальтированию дорог, тротуаров, дворов и площадок, благоустройству территорий и капитальному ремонту асфальтовых покрытий.
+					p Накопленный опыт позволяет нам качественно и оперативно осуществлять весь комплекс работ. Наша репутация - сотни успешно завершенных объектов, сотрудничество с крупными коммерческими организациями, благодарные отзывы клиентов самого разного уровня.
+			+e.plus
+				+card-plus('> 1 млн', 'м<sup>3</sup> железобетона залито')
+				+card-plus('100', 'сотрудников <br> в штате')
+				+card-plus('12', 'лет опыта')
+				+card-plus('35', 'единиц спец. техники')
+			+banner-middle('img/banner-middle__banner.png', 'Вся предлагаемая <br> нами в аренду техника <br> из <b>собственного парка</b>')
+		+about()
+		+footer()
+		+popup()
+		+popup-call()

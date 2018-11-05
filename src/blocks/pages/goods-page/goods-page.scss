@@ -1,0 +1,76 @@
+.goods-page {
+
+	&__about {
+		margin: 50px 0;
+
+		h2 {
+			margin-bottom: 40px;
+			font-size: 3rem;
+			color: #1d1d1d;
+			font-weight: 900;
+		}
+
+		p {
+			color: #9c9c9c;
+			font-size: 1.5rem;
+			line-height: 2.4rem;
+			font-weight: 300;
+
+			&:not(:first-child) {
+				margin-top: 25px;
+			}
+		}
+	}
+
+	&__special {
+
+		&-headline {
+			display: inline-flex;
+			align-items: center;
+			margin-bottom: 30px;
+
+			svg {
+				margin-right: 25px;
+				width: 27px;
+				height: 27px;
+				fill: #ebebeb;
+			}
+
+			h2 {
+				font-size: 3rem;
+				font-weight: 900;
+				text-transform: uppercase;
+				color: #f3af34;
+			}
+		}
+
+		&-list {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: flex-start;
+		}
+	}
+
+	@include width-md {
+
+		&__special {
+
+			&-headline {
+				
+				h2 {
+					font-size: 2rem;
+				}
+			}
+
+			&-list {
+				flex-direction: column;
+				align-items: center;
+
+				.card-special+.card-special {
+					margin-top: 35px;
+				}
+			}
+		}
+	}
+}

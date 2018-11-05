@@ -1,0 +1,40 @@
+extends ../layout/layoutBase.pug
+
+include ../../blocks/header/header
+include ../../blocks/banner-small/banner-small
+include ../../blocks/contact-form/contact-form
+include ../../blocks/footer/footer
+include ../../blocks/popup/popup
+include ../../blocks/popup-call/popup-call
+	
+block content
+	- var page = 'contacts';
+	+b.contacts-page
+		+header()
+		.wrap
+			+banner-small('img/banner-small-bg-1.png', 'Скидка на все бульдозеры <br> <b>15% только в ноябре!</b>', '--orange')
+			+b.bread-crumbs--line 
+				ul
+					li
+						a(href="#") Главная
+					li 
+						span / 
+					li
+						span Контакты  
+			+e.H2.title Контакты
+			+e.adds
+				+e.adds-info
+					+e.adds-item
+						p Фактический адрес
+						p г. Самара, Томашевский тупик 3, офис 7
+					+e.adds-item
+						p Телефоны
+						p 240-76-21 , 240-76-22
+				+e.adds-map
+					iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2388.970416115732!2d50.245274415197414!3d53.21837879199066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41661be418e7c959%3A0xb4842f3aa7141cdd!2z0KLQvtC80LDRiNC10LLRgdC60LjQuSDRgtGD0L8uLCAzLCA3LCDQodCw0LzQsNGA0LAsINCh0LDQvNCw0YDRgdC60LDRjyDQvtCx0LsuLCDQoNC-0YHRgdC40Y8sIDQ0MzAwOA!5e0!3m2!1sru!2sua!4v1539693804864", width="100%", height="100%", frameborder="0", style="border:0", allowfullscreen)
+		+e.question
+			+contact-form()
+		
+		+footer()
+		+popup()
+		+popup-call()

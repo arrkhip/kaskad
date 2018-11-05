@@ -1,0 +1,30 @@
+extends ../layout/layoutBase.pug
+
+include ../../blocks/header/header
+include ../../blocks/banner-small/banner-small
+include ../../blocks/price-table/price-table
+include ../../blocks/about/about
+include ../../blocks/footer/footer
+include ../../blocks/popup/popup
+include ../../blocks/popup-call/popup-call
+	
+block content
+	- var page = 'price';
+	+b.price-page
+		+header()
+		.wrap
+			+banner-small('img/banner-small-bg-1.png', 'Вся техника <br> <b>из собственного парка</b>', '--blue')
+			+b.bread-crumbs--line 
+				ul
+					li
+						a(href="#") Главная
+					li 
+						span / 
+					li
+						span Прайс лист
+			+e.H2.title ПРАЙС ЛИСТ
+			+price-table() 
+		+about()
+		+footer()
+		+popup()
+		+popup-call()

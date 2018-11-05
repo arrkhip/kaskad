@@ -1,0 +1,19 @@
+mixin card-work(title, url) 
+	+b.card-work
+		+e.header
+			p Самара
+			p= title
+		+e.body(style="background-image: url(" + url + ");")
+			+e.UL.info
+				+e.LI.info-item Виды работ:
+				+e.LI.info-item - разработка котлована;
+				+e.LI.info-item - устройство монолитных конструкций;
+				+e.LI.info-item - устройство ограждающих конструкций;
+				+e.LI.info-item - устройство кровли и фасада;
+				+e.LI.info-item - устройство оконных конструкций.
+
+
+
+
+
+

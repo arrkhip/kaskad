@@ -1,0 +1,12 @@
+include ../../blocks/svg-icon/svg-icon
+
+mixin about-banner() 
+	+b.about-banner
+		+e.info
+			+e.info-title Мы надежная </br> компания
+			+e.info-descr
+				p 12 лет
+				p на рынке </br> дорожных работ
+			+e.info-arrow
+				+svg-icon('arrow-long')
+		+e.banner 

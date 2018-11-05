@@ -1,0 +1,38 @@
+.patterns-page {
+
+	&__promo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #fd961b;
+		height: 350px;
+		margin-bottom: 100px;
+		background: url(../img/about-bg.png) no-repeat center / cover;
+
+		h2 {
+			margin-bottom: 20px;
+			font-weight: 900;
+			font-size: 6rem;
+			letter-spacing: 2px;
+			color: #fff;
+		}
+
+		p {
+			font-size: 2rem;
+			color: #ab5900;
+		}
+	}
+
+	.header {
+		position: relative;
+	}
+
+	&__icon {
+		width: 30px;
+		height: 30px;
+
+		&:not(:last-child) {
+			margin-right: 30px;
+		}
+	}
+}

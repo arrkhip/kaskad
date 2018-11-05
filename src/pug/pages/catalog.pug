@@ -1,0 +1,53 @@
+extends ../layout/layoutBase.pug
+
+include ../../blocks/header/header
+include ../../blocks/filter/filter
+include ../../blocks/card-product/card-product
+include ../../blocks/pagination/pagination
+include ../../blocks/footer/footer
+include ../../blocks/popup/popup
+include ../../blocks/popup-call/popup-call
+	
+block content
+	+b.catalog-page
+		+header()
+		.wrap
+			+b.bread-crumbs.--line
+				ul
+					li
+						a(href="#") Главная  
+					li 
+						span /   
+					li
+						a(href="#") Аренда спецтехники
+					li 
+						span /  
+					li 
+						span Каталог
+			+e.headline
+				h2 Каталог спецтехники
+				+e.headline-select
+					select
+						option со скидкой	
+						option со скидкой	
+						option со скидкой	
+			+e.inner
+				+filter()
+				+e.content
+					+e.list
+						+card-product('img/card-product__banner-3.png', 'Каток грунтовый', 'AMMANN-16тн')
+						+card-product('img/card-product__banner-2.png', 'Каток гладковальцовый вибро', 'HAMM HD+90VO 9.5тн')
+						+card-product('img/card-product__banner-3.png', 'Каток грунтовый', 'AMMANN-16тн')
+						+card-product('img/card-product__banner-2.png', 'Каток гладковальцовый вибро', 'HAMM HD+90VO 9.5тн')
+						+card-product('img/card-product__banner-4.png', 'Каток грунтовой', 'НАММ 3518 -18тн')
+						+card-product('img/card-product__banner-1.png', 'Каток пневмошинный', 'HAMM GRV15 18тн')
+						+card-product('img/card-product__banner-4.png', 'Каток грунтовой', 'НАММ 3518 -18тн')
+						+card-product('img/card-product__banner-1.png', 'Каток пневмошинный', 'HAMM GRV15 18тн')
+						+card-product('img/card-product__banner-1.png', 'Каток пневмошинный', 'HAMM GRV15 18тн')
+						+card-product('img/card-product__banner-4.png', 'Каток грунтовой', 'НАММ 3518 -18тн')
+						+card-product('img/card-product__banner-1.png', 'Каток пневмошинный', 'HAMM GRV15 18тн')
+						+card-product('img/card-product__banner-4.png', 'Каток грунтовой', 'НАММ 3518 -18тн')
+					+pagination()
+		+footer('--sm')
+		+popup()
+		+popup-call()

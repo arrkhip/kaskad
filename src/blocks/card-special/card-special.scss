@@ -1,0 +1,64 @@
+.card-special {
+	width: 100%;
+	max-width: 350px;
+	font-weight: 900;
+
+	&__banner {
+		margin-bottom: 20px;
+
+		img {
+			width: 330px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 25px;
+		p {
+			color: #343434;
+			line-height: 1;
+
+			&:first-child {
+				margin-bottom: 10px;
+				font-size: 1.8rem;
+			}
+
+			&:last-child {
+				font-size: 3rem;
+			}
+		}
+	}
+
+	&__price {
+		padding: 20px;
+		background-color: #f3af34;
+		box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+
+		&-title {
+			margin-bottom: 10px;
+			font-size: 1.8rem;
+			color: $white;
+		}
+
+		&-new {
+			display: inline-block;
+			vertical-align: baseline;
+			font-size: 3.6rem;
+			color: #ab5900;
+			margin-right: 7px;
+
+			span {
+				vertical-align: baseline;
+				font-size: 2.4rem;
+			}
+		}
+
+		&-old {
+			display: inline-block;
+			vertical-align: baseline;
+			font-size: 2.4rem;
+			text-decoration: line-through;
+			font-weight: 700;
+			color: $white;
+		}
+	}
+}

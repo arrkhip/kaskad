@@ -1,0 +1,12 @@
+mixin card-special(src, name, id) 
+	+b.card-special
+		+e.banner
+			img(src=src, alt="")
+		+e.title
+			p= name
+			p= id
+		+e.price
+			+e.price-title Цена за смену
+			+e.price-new 15 000 
+				span руб
+			+e.price-old 20 000 руб

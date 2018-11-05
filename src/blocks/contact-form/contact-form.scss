@@ -1,0 +1,90 @@
+.contact-form {
+	width: 100%;
+	max-width: 765px;
+	padding: 45px 35px;
+	border-radius: 2px;
+	background-color: $white;
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+
+	&__header {
+		margin-bottom: 30px;
+
+		p {
+			font-size: 2rem;
+			line-height: 3rem;
+			color: #151515;
+
+			&:first-child {
+				font-weight: 900;
+			}
+		}
+	}
+
+	&__body {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+	}
+
+	&__col {
+
+		&:first-child {
+			width: 100%;
+			max-width: 270px;
+			margin-right: 20px;
+		}
+
+		&:nth-child(2) {
+			width: 100%;
+			max-width: 400px;
+		}
+
+		&:nth-child(3) {
+			width: 100%;
+		}
+	}
+
+	.textarea {
+		height: 241px;
+		resize: none;
+	}
+
+	.input {
+		margin-bottom: 29px;
+	}
+
+	.btn {
+		height: 42px;
+		padding: 0 30px;
+		margin-top: 10px;
+		font-size: 1.2rem;
+		letter-spacing: 2px;
+	}
+
+	@include width-sm {
+		padding: 35px 20px;
+
+		&__body {
+		}
+
+		&__col {
+
+			&:first-child {
+				max-width: 100%;
+				margin-right: 0;
+			}
+
+			&:nth-child(2) {
+				max-width: 100%;
+			}
+		}
+
+		.textarea {
+			height: 120px;
+		}
+
+		.btn {
+			margin-top: 35px;
+		}
+	}
+}

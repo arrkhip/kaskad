@@ -1,0 +1,44 @@
+extends ../layout/layoutBase.pug
+
+include ../../blocks/header/header
+include ../../blocks/slider/slider
+include ../../blocks/card-product/card-product
+include ../../blocks/banner-middle/banner-middle
+include ../../blocks/about/about
+include ../../blocks/footer/footer
+include ../../blocks/popup/popup
+include ../../blocks/popup-call/popup-call
+
+	
+block content
+	+b.index-page
+		+header()
+		.wrap(class="wow fadeInUp", data-wow-duration="1s", data-wow-delay=".3s")
+			+slider()
+		+e.products
+			.wrap
+				+e.headline(class="wow fadeInLeft", data-wow-duration="1s", data-wow-delay=".3s")
+					h2 Самые выгодные предложения
+					+e.headline-select
+						select
+							option Акция
+							option Пункт 1
+							option Пункт 2
+				+e.list(class="wow fadeInUp", data-wow-duration="1.5s", data-wow-delay=".6s")
+					+card-product('img/card-product__banner-3.png', 'Каток грунтовый', 'AMMANN-16тн')
+					+card-product('img/card-product__banner-2.png', 'Каток гладковальцовый вибро', 'HAMM HD+90VO 9.5тн')
+					+card-product('img/card-product__banner-3.png', 'Каток грунтовый', 'AMMANN-16тн')
+					+card-product('img/card-product__banner-2.png', 'Каток гладковальцовый вибро', 'HAMM HD+90VO 9.5тн')
+					+card-product('img/card-product__banner-4.png', 'Каток грунтовой', 'НАММ 3518 -18тн')
+					+card-product('img/card-product__banner-1.png', 'Каток пневмошинный', 'HAMM GRV15 18тн')
+					+card-product('img/card-product__banner-4.png', 'Каток грунтовой', 'НАММ 3518 -18тн')
+					+card-product('img/card-product__banner-1.png', 'Каток пневмошинный', 'HAMM GRV15 18тн')
+					+card-product('img/card-product__banner-1.png', 'Каток пневмошинный', 'HAMM GRV15 18тн')
+					+card-product('img/card-product__banner-4.png', 'Каток грунтовой', 'НАММ 3518 -18тн')
+					+card-product('img/card-product__banner-1.png', 'Каток пневмошинный', 'HAMM GRV15 18тн')
+					+card-product('img/card-product__banner-4.png', 'Каток грунтовой', 'НАММ 3518 -18тн')
+				+banner-middle('img/banner-middle__banner.png', 'Вся предлагаемая <br> нами в аренду техника <br> из <b>собственного парка</b>')(class="wow fadeInLeft", data-wow-duration="1s", data-wow-delay=".3s")
+		+about()(class="wow fadeInUp", data-wow-duration="1s", data-wow-delay=".3s")
+		+footer()(class="wow fadeInUp", data-wow-duration="1s", data-wow-delay=".3s")
+		+popup()
+		+popup-call()

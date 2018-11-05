@@ -1,0 +1,30 @@
+mixin card-product(srcImg, descr, name) 
+	+b.card-product
+		+e.banner
+			img(src=srcImg, alt="")
+		+e.info
+			+e.header
+				p= descr
+				h2= name
+			+e.list
+				+e.row
+					p Грузоподъемность
+					p до 20 тонн
+				+e.row
+					p Стоимость 1 маш./часа
+					p 2500 руб.
+				+e.row
+					p Стоимость 1км пробега
+					p 50 руб.
+				+e.row
+					p Количество
+					p 1 шт
+		+e.BUTTON.btn.btn--skew.js-open-popup Арендовать
+			+svg-icon('arrow')
+
+
+
+
+
+
+

@@ -1,0 +1,135 @@
+html,
+body {
+  height: 100%;
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+  font: 400 1.6rem/1 $font-main;
+  color: $black;
+  background-color: $white;
+  overflow-x: hidden;
+  min-width: 320px;
+}
+
+* {
+  box-sizing: border-box;
+  vertical-align: top; 
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a:focus,
+button:focus,
+img:focus {
+  outline: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+  line-height: 1.8rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto; 
+}
+
+.label {
+  display: block;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #474747;
+}
+
+.input {
+  width: 100%;
+  height: 45px;
+  border: none;
+  border-radius: 1px;
+  padding: 0 10px;
+  line-height: 4.5rem;
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  background-color: #ebebeb;
+
+  &:focus {
+    border-bottom-color: #2177af;
+  }
+}
+
+.textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 1px;
+  background-color: #ebebeb;
+  
+  &:focus {
+    border-bottom-color: #2177af;
+  }
+}
+
+input:focus, 
+textarea:focus {
+  outline: none; 
+}
+
+input[type="text"]:focus::-webkit-input-placeholder { color: transparent; }
+input[type="text"]:focus::-moz-placeholder          { color: transparent; }
+input[type="text"]:focus:-moz-placeholder           { color: transparent; }
+input[type="text"]:focus:-ms-input-placeholder      { color: transparent; }
+
+input[type="tel"]:focus::-webkit-input-placeholder { color: transparent; }
+input[type="tel"]:focus::-moz-placeholder          { color: transparent; }
+input[type="tel"]:focus:-moz-placeholder           { color: transparent; }
+input[type="tel"]:focus:-ms-input-placeholder      { color: transparent; }
+
+textarea:focus::-webkit-input-placeholder           { color: transparent; }
+textarea:focus::-moz-placeholder                    { color: transparent; }
+textarea:focus:-moz-placeholder                     { color: transparent; }
+textarea:focus:-ms-input-placeholder                { color: transparent; }
+
+// ::-webkit-input-placeholder                         { color: fade(@grey-dark, 50%); }
+// ::-moz-placeholder                                  { color: fade(@grey-dark, 50%); }
+// :-moz-placeholder                                   { color: fade(@grey-dark, 50%); }
+// :-ms-input-placeholder                              { color: fade(@grey-dark, 50%); }
+
+.scroll-hidden {
+  overflow: hidden;
+  padding-right: 17px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+

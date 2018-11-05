@@ -1,0 +1,5 @@
+mixin banner-middle(urlImg, descr)
+	+b.banner-middle&attributes(attributes)
+		+e.info
+			p!= descr
+		+e.banner(style="background-image: url(" +urlImg+");")

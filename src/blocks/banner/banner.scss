@@ -1,0 +1,169 @@
+.banner {
+	position: relative;
+	display: flex;
+
+	&__info {
+		position: relative;
+		width: 430px;
+		padding-top: 83px;
+		padding-bottom: 50px;
+		background-color: #fd961b;
+		z-index: 1;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -190px;
+			width: 0;
+			height: 0;
+			border-right: 0 solid transparent;
+			border-left: 190px solid transparent;
+			border-bottom: 385px solid #fd961b;
+		}
+
+		&-title {
+			position: relative;
+			left: 25px;
+			margin-bottom: 30px;
+
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				width: 20px;
+				height: 60px;
+				background-color: fade-out($white, .85);
+				transform: skew(-27deg);
+			}
+
+			&::before {
+				left: -58px;
+				bottom: -28px;
+			}
+
+			&::after {
+				bottom: 40px;
+				right: 85px;
+			}
+
+			p {
+				line-height: 1;
+				font-weight: 900;
+
+				&:first-child {
+					font-size: 7.4rem;
+					color: #ab5900;
+				}
+
+				&:last-child {
+					color: $white;
+					font-size: 4.8rem;
+				}
+			}
+		}
+
+		&-descr {
+			position: relative;
+			margin-left: -85px;
+			z-index: 2;
+
+			p {
+				display: inline-block;
+				font-weight: 900;
+				line-height: 1;
+
+				&:first-child {
+					color: white;
+					font-size: 10rem;
+					text-transform: uppercase;
+				}
+
+				&:last-child {
+					font-size: 4.2rem;
+					color: #ab5900;
+				}
+			}
+		}
+	}
+
+	&__banner {
+		width: calc(100% - 430px);
+		background: url(../img/banner-bg.png) no-repeat center / cover;
+	}
+
+	@include width-md {
+
+		&__info,
+		&__banner {
+			width: 100%;
+		}
+
+		&__info {
+			background-color: rgba(253,150,27,.93);
+
+			&::before {
+				display: none;
+			}
+
+			&-title {
+				&::before,
+				&::after {
+					display: none;
+				}
+			}
+
+			&-descr {
+				margin-left: 20px;
+			}
+		}
+
+		&__banner {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+		}
+	}
+
+	@include width-sm {
+
+		&__info {
+			padding-left: 40px;
+			padding-top: 40px;
+			padding-bottom: 40px;
+
+			&-title {
+
+				p {
+
+					&:first-child {
+						font-size: 5rem;
+					}
+
+					&:last-child {
+						font-size: 3.5rem;
+					}
+				}
+			}
+
+			&-descr {
+
+				p:first-child {
+					font-size: 8rem;
+				}
+
+				p:last-child {
+					font-size: 3.6rem;
+				}
+			}
+		}
+	}
+
+	@include width-xs{
+
+		&__info {
+			padding-left: 10px;
+		}
+	}
+}

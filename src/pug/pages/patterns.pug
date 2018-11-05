@@ -1,0 +1,158 @@
+extends ../layout/layoutBase.pug
+
+include ../../blocks/pattern/pattern
+include ../../blocks/header/header
+include ../../blocks/footer/footer
+include ../../blocks/svg-icon/svg-icon
+include ../../blocks/about/about
+include ../../blocks/card-product/card-product
+include ../../blocks/banner/banner
+include ../../blocks/banner-small/banner-small
+include ../../blocks/banner-middle/banner-middle
+include ../../blocks/slider/slider
+include ../../blocks/filter/filter
+include ../../blocks/contact-form/contact-form
+include ../../blocks/price-table/price-table
+include ../../blocks/card-service/card-service
+include ../../blocks/card-work/card-work
+include ../../blocks/about-banner/about-banner
+include ../../blocks/card-plus/card-plus
+include ../../blocks/popup/popup
+include ../../blocks/card-special/card-special
+include ../../blocks/card-goods/card-goods
+include ../../blocks/pagination/pagination
+
+	
+block content
+	- var page = 'catalog';
+
+	+b.patterns-page
+		+e.promo
+			.wrap
+				h2 «Kaskad»
+				p На данной странице представленны базовые элементы сайта.
+
+		+e.content
+			+pattern('Header')
+				+header()
+
+			+pattern('Footer')
+				+footer()
+
+			+pattern('Footer Small')
+				+footer('--sm')
+
+			+pattern('Кнопки')
+				.wrap
+					button.btn Заказать звонок
+					br
+					br
+					a(href="#").btn.btn--skew Арендовать
+						+svg-icon('arrow')
+
+			+pattern('Элементы форм')
+				.wrap
+					label.label(for="name") Имя
+					input.input(type="text", id="name", style="width: 300px;")
+					br
+					br
+					label.label(for="message") Сообщение
+					textarea.textarea(id="message", style="width: 300px;")
+
+			+pattern('Иконки')
+				.wrap
+					+svg-icon('tel', 'patterns-page__icon')
+					+svg-icon('address', 'patterns-page__icon')
+					+svg-icon('arrow', 'patterns-page__icon')
+					+svg-icon('arrow-long', 'patterns-page__icon')
+					+svg-icon('close', 'patterns-page__icon')
+					+svg-icon('star', 'patterns-page__icon')
+
+			+pattern('О компании')
+				+about()
+
+			+pattern('Хлебные крошки')
+				.wrap
+					+b.bread-crumbs 
+						ul
+							li
+								a(href="#") Главная
+							li 
+								span /   
+							li
+								a(href="#") Аренда спецтехники
+							li 
+								span /   
+							li
+								span Цены
+
+			+pattern('Карточка товара')
+				.wrap
+					+card-product('img/card-product__banner-3.png', 'Каток грунтовый', 'AMMANN-16тн')
+
+			+pattern('Маленький баннер')
+				.wrap
+					+banner-small('img/banner-small-bg-1.png', 'Скидка на все бульдозеры <br> <b>15% только в ноябре!</b>', '--orange')
+					br
+					br
+					br
+					+banner-small('img/banner-small-bg-1.png', 'Вся техника <br> <b>из собственного парка</b>', '--blue')
+
+			+pattern('Средний баннер')
+				.wrap
+					+banner-middle('img/banner-middle__banner.png', 'Вся предлагаемая <br> нами в аренду техника <br> из <b>собственного парка</b>')
+
+			+pattern('Баннер')
+				.wrap
+					+banner()
+
+			+pattern('Слайдер')
+				.wrap
+					+slider()
+
+			+pattern('Фильтр')
+				.wrap
+					+filter()
+
+			+pattern('Контактная форма')
+				.wrap
+					+contact-form()
+
+			+pattern('Прайс')
+				.wrap
+					+price-table()
+
+			+pattern('Карточка услуги')
+				.wrap
+					+card-service('--left', 'Аренда асфальтоукладчика', 'Аренда асфальтоукладчика – выгодное решение, к которому каждый день прибегают сотни компаний. Асфальтоукладчик используется для укладки горячего асфальта. Компания «Трасса М95» предлагает Вам надёжные и современные асфальтоукладчики отечественных и зарубежных производителей.', 'Мы также предлагаем Вам аренду тротуарного асфальтоукладчика Асфальтоукладчики сочетают высокую скорость укладки асфальта, надежность и низкую цену.', '../img/card-service__banner-1.png')
+					br
+					+card-service('--right', 'Аренда бульдозера', 'Бульдозер – это мощная самоходная машина, предназначенная для решения целой группы задач по проектированию площадей и территорий, разработке грунта, а также угла насыпи и точного регулирования высоты.', 'Так же бульдозеры применяются при строительстве дорог, при подготовке строительных площадей, а также для решения частных задач по демонтажу и сносу, а также при планировании территории.', '../img/card-service__banner-2.png')
+
+			+pattern('Карточка выполненной работы')
+				.wrap
+					+card-work('ЖК «Парк победы»', '../img/card-work-bg-1.png')
+
+			+pattern('Банер о компании')
+				.wrap
+					+about-banner()
+
+			+pattern('Карточка преимущества')
+				.wrap
+					+card-plus('> 1 млн', 'м<sup>3</sup> железобетона залито')
+
+
+			+pattern('Модальное окно')
+				.wrap
+					+popup()
+
+			+pattern('Карточка спецпредложения')
+				.wrap
+					+card-special('img/card-product__banner-4.png', 'Каток грунтовой', 'НАММ 3518 -18тн')
+
+			+pattern('Карточка продукта')
+				.wrap
+					+card-goods()
+
+			+pattern('Пагинация')
+				.wrap
+					+pagination()

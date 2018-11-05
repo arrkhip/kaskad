@@ -1,0 +1,107 @@
+.card-product {
+	width: 265px;
+
+	&:hover {
+		cursor: pointer;
+
+		.card-product {
+
+			&__info {
+				background-color: #f3af34;
+				border-radius: 2px;
+			}
+
+			&__header {
+				border-bottom-color: rgba(170, 69, 1, 0.15);
+
+				p {
+					color: $white;
+				}
+
+				h2 {
+					color: #ab5900;
+				}
+			}
+
+			&__row p {
+
+				&:first-child {
+					color: #ab5900;
+				}
+
+				&:last-child {
+					color: $white;
+				}
+			}
+		}
+	}
+
+	&__banner {
+		
+	}
+
+	&__info {
+		padding: 15px 25px 30px;
+		background-color: rgba(31, 112, 170, 0.05);
+		@include trs;
+	}
+
+	&__header {
+		padding-bottom: 8px;
+		margin-bottom: 18px;
+		border-bottom: 1px solid rgba(149, 149, 149, 0.15);
+		@include trs;
+
+		p {
+			font-size: 1.4rem;
+			font-weight: 700;
+			line-height: 1.9rem;
+			color: #343434;
+			@include trs;
+		}
+
+		h2 {
+			font-size: 1.8rem;
+			font-weight: 900;
+			line-height: 1.9rem;
+			color: #343434;
+			@include trs;
+		}
+	}
+
+	&__list {
+
+	}
+
+	&__row {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+
+		&:not(:last-child) {
+			margin-bottom: 8px;
+		}
+
+		p {
+			font-size: 1.2rem;
+			font-weight: 500;
+			color: #7f7f7f;
+			@include trs;
+
+			&:last-child {
+				font-weight: 700;
+				color: #262626;
+			}
+		}
+	}
+
+	&__btn {
+		height: 37px;
+		padding: 0 15px;
+		margin-left: calc(100% - 165px);
+
+		&::before {
+			border-top-width: 37px;
+		}
+	}
+}

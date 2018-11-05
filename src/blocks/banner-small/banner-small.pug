@@ -1,0 +1,5 @@
+mixin banner-small(urlImg, descr, mod) 
+	+b.banner-small(class=mod)
+		+e.info
+			p!= descr
+		+e.banner(style="background-image: url(" +urlImg+");")
